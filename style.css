@@ -200,40 +200,17 @@ section{position:relative; z-index:1;}
     linear-gradient(to left, transparent 48%, var(--bg) 98%);
 }
 @media (max-width:760px){
-  .hero-portrait{ width:52vw; right:-4%; bottom:-2%; opacity:0.65; }
+  .hero-portrait{ width:48vw; right:-3%; bottom:-2%; opacity:0.6; }
 }
-/* On phones: show portrait above content instead of hiding it */
-@media (max-width:520px){
-  .hero{
-    padding-top:90px;
-    padding-bottom:40px;
-  }
-  .hero .container{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-  }
-  .hero-portrait{
-    position:relative;
-    right:auto;
-    bottom:auto;
-    width:56vw;
-    max-width:200px;
-    opacity:0.9;
-    margin-bottom:28px;
-    align-self:flex-end;
-    pointer-events:none;
-  }
-  .hero-portrait img{
-    -webkit-mask-image: linear-gradient(to bottom, #000 65%, transparent 98%);
-    mask-image: linear-gradient(to bottom, #000 65%, transparent 98%);
-    -webkit-mask-composite: source-over;
-    mask-composite: add;
-  }
-  .hero-content{
-    position:static;
-    width:100%;
-  }
+/* Tablets mid-range: shrink further */
+@media (max-width:640px){
+  .hero-portrait{ width:44vw; opacity:0.45; }
+  .hero-float{ display:none; }
+}
+/* Phones: hide portrait cleanly, focus on text */
+@media (max-width:600px){
+  .hero-portrait{ display:none; }
+  .hero{ padding-top:100px; padding-bottom:60px; }
 }
 .hero-status{
   display:inline-flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:12.5px;

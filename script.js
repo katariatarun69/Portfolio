@@ -137,33 +137,66 @@
     });
   });
 
-  /* ---- contact form validation (client-side only) ---- */
+  /* ---- contact form — Web3Forms submission ---- */
   var form = document.getElementById('contactForm');
   form.addEventListener('submit', function(e){
     e.preventDefault();
-    var name = document.getElementById('f-name');
-    var email = document.getElementById('f-email');
-    var msg = document.getElementById('f-message');
+    var nameEl  = document.getElementById('f-name');
+    var emailEl = document.getElementById('f-email');
+    var msgEl   = document.getElementById('f-message');
+    var btn     = document.getElementById('formSubmitBtn');
+    var note    = document.getElementById('formNote');
     var ok = true;
 
-    document.getElementById('err-name').textContent = '';
-    document.getElementById('err-email').textContent = '';
+    /* clear previous errors & note */
+    document.getElementById('err-name').textContent    = '';
+    document.getElementById('err-email').textContent   = '';
     document.getElementById('err-message').textContent = '';
+    note.className = 'form-note';
+    note.textContent = '';
 
-    if(!name.value.trim()){ document.getElementById('err-name').textContent = 'Please enter your name.'; ok = false; }
+    /* validate */
+    if(!nameEl.value.trim()){
+      document.getElementById('err-name').textContent = 'Please enter your name.'; ok = false;
+    }
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if(!emailPattern.test(email.value.trim())){ document.getElementById('err-email').textContent = 'Please enter a valid email.'; ok = false; }
-    if(msg.value.trim().length < 10){ document.getElementById('err-message').textContent = 'Message should be at least 10 characters.'; ok = false; }
-
+    if(!emailPattern.test(emailEl.value.trim())){
+      document.getElementById('err-email').textContent = 'Please enter a valid email.'; ok = false;
+    }
+    if(msgEl.value.trim().length < 10){
+      document.getElementById('err-message').textContent = 'Message should be at least 10 characters.'; ok = false;
+    }
     if(!ok) return;
 
-    var subject = encodeURIComponent('Project inquiry from ' + name.value.trim());
-    var body = encodeURIComponent(msg.value.trim() + '\n\n— ' + name.value.trim() + ' (' + email.value.trim() + ')');
-    window.location.href = 'mailto:katariatarun786@gmail.com?subject=' + subject + '&body=' + body;
+    /* loading state */
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
 
-    var note = document.getElementById('formNote');
-    note.classList.add('show');
-    form.reset();
+    var data = new FormData(form);
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: data
+    })
+    .then(function(res){ return res.json(); })
+    .then(function(json){
+      if(json.success){
+        note.textContent = '✓ Message sent — I\'ll get back to you shortly!';
+        note.classList.add('show', 'success');
+        form.reset();
+      } else {
+        note.textContent = '✗ Something went wrong. Please email me directly at katariatarun786@gmail.com';
+        note.classList.add('show', 'error');
+      }
+    })
+    .catch(function(){
+      note.textContent = '✗ Network error. Please email me directly at katariatarun786@gmail.com';
+      note.classList.add('show', 'error');
+    })
+    .finally(function(){
+      btn.disabled = false;
+      btn.textContent = 'Send message';
+    });
   });
 
   /* ---- webhook feed marquee content (signature element) ---- */

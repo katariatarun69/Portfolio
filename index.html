@@ -578,6 +578,13 @@
       </div>
 
       <form class="reveal" id="contactForm" novalidate>
+        <!-- Web3Forms -->
+        <input type="hidden" name="access_key" value="79bedb50-cc5c-4a20-9076-4d821d3bb5a4">
+        <input type="hidden" name="subject" value="New project inquiry — Tarun Kataria Portfolio">
+        <input type="hidden" name="from_name" value="Portfolio Contact Form">
+        <!-- Honeypot spam prevention -->
+        <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
+
         <div class="form-field">
           <label for="f-name">Name</label>
           <input type="text" id="f-name" name="name" autocomplete="name">
@@ -593,8 +600,8 @@
           <textarea id="f-message" name="message"></textarea>
           <span class="err" id="err-message"></span>
         </div>
-        <button type="submit" class="form-submit">Send message</button>
-        <p class="form-note" id="formNote">Message ready — your email client should open shortly.</p>
+        <button type="submit" class="form-submit" id="formSubmitBtn">Send message</button>
+        <p class="form-note" id="formNote"></p>
       </form>
     </div>
   </div>

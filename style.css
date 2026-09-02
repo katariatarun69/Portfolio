@@ -200,13 +200,40 @@ section{position:relative; z-index:1;}
     linear-gradient(to left, transparent 48%, var(--bg) 98%);
 }
 @media (max-width:760px){
-  .hero-portrait{ width:52vw; right:-6%; bottom:-2%; opacity:0.7; }
+  .hero-portrait{ width:52vw; right:-4%; bottom:-2%; opacity:0.65; }
 }
-@media (max-width:640px){
-  .hero-float{ display:none; }
-}
+/* On phones: show portrait above content instead of hiding it */
 @media (max-width:520px){
-  .hero-portrait{ display:none; }
+  .hero{
+    padding-top:90px;
+    padding-bottom:40px;
+  }
+  .hero .container{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .hero-portrait{
+    position:relative;
+    right:auto;
+    bottom:auto;
+    width:56vw;
+    max-width:200px;
+    opacity:0.9;
+    margin-bottom:28px;
+    align-self:flex-end;
+    pointer-events:none;
+  }
+  .hero-portrait img{
+    -webkit-mask-image: linear-gradient(to bottom, #000 65%, transparent 98%);
+    mask-image: linear-gradient(to bottom, #000 65%, transparent 98%);
+    -webkit-mask-composite: source-over;
+    mask-composite: add;
+  }
+  .hero-content{
+    position:static;
+    width:100%;
+  }
 }
 .hero-status{
   display:inline-flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:12.5px;
@@ -228,6 +255,7 @@ section{position:relative; z-index:1;}
 .hero h1 .accent-word{color:var(--accent); font-style:normal;}
 
 .hero-row{display:flex; gap:64px; margin-top:40px; flex-wrap:wrap;}
+@media (max-width:520px){ .hero-row{gap:28px; margin-top:28px;} }
 .hero-desc{max-width:440px; color:var(--text-dim); font-size:1.08rem;}
 .hero-desc strong{color:var(--text); font-weight:600;}
 
@@ -345,6 +373,10 @@ section{position:relative; z-index:1;}
   .project-main{grid-template-columns:1fr;}
   .project-visual{order:-1; aspect-ratio:16/9;}
   .case-grid{grid-template-columns:1fr;}
+}
+@media (max-width:600px){
+  .project{grid-template-columns:40px 1fr; gap:16px; padding:32px 0;}
+  .project-num{font-size:12px;}
 }
 
 /* ============ CAPABILITIES BENTO ============ */

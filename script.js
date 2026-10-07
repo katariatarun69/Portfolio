@@ -139,7 +139,7 @@
 
   /* ---- contact form — Web3Forms submission ---- */
   var form = document.getElementById('contactForm');
-  form.addEventListener('submit', function(e){
+  form.addEventListener('submit', async function(e){
     e.preventDefault();
     var nameEl  = document.getElementById('f-name');
     var emailEl = document.getElementById('f-email');
@@ -173,30 +173,29 @@
     btn.textContent = 'Sending…';
 
     var data = new FormData(form);
+    data.append('access_key', '9e10efaa-df3d-4902-b438-ba4da540d9a8');
 
-    fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      body: data
-    })
-    .then(function(res){ return res.json(); })
-    .then(function(json){
-      if(json.success){
+    try {
+      var response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      });
+      var json = await response.json();
+      if(response.ok && json.success){
         note.textContent = '✓ Message sent — I\'ll get back to you shortly!';
         note.classList.add('show', 'success');
         form.reset();
       } else {
-        note.textContent = '✗ Something went wrong. Please email me directly at katariatarun786@gmail.com';
+        note.textContent = '✗ ' + (json.message || 'Something went wrong. Please email me directly at katariatarun786@gmail.com');
         note.classList.add('show', 'error');
       }
-    })
-    .catch(function(){
+    } catch(err) {
       note.textContent = '✗ Network error. Please email me directly at katariatarun786@gmail.com';
       note.classList.add('show', 'error');
-    })
-    .finally(function(){
+    } finally {
       btn.disabled = false;
       btn.textContent = 'Send message';
-    });
+    }
   });
 
   /* ---- webhook feed marquee content (signature element) ---- */

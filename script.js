@@ -173,7 +173,6 @@
     btn.textContent = 'Sending…';
 
     var data = new FormData(form);
-    data.append('access_key', '9e10efaa-df3d-4902-b438-ba4da540d9a8');
 
     try {
       var response = await fetch('https://api.web3forms.com/submit', {

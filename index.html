@@ -1,626 +1,1101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tarun Kataria — WordPress Backend Developer</title>
-<meta name="description" content="Tarun Kataria is a WordPress backend developer specializing in PHP, custom plugins, WooCommerce, and webhook-driven integrations.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarun Kataria — Backend Developer | PHP · APIs · WordPress</title>
+  <meta name="description"
+    content="Backend developer specializing in PHP, MySQL, APIs, webhooks, integrations, and production WordPress systems.">
+  <meta name="theme-color" content="#0a0c0f">
+  <link rel="canonical" href="https://katariatarun69.github.io/Portfolio/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0c0f'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='28' font-weight='700' text-anchor='middle' fill='%23ffb020'%3ETK%3C/text%3E%3C/svg%3E">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tarun Kataria">
+  <meta property="og:title" content="Tarun Kataria — Backend Developer | PHP · APIs · WordPress">
+  <meta property="og:description" content="Backend developer specializing in PHP, MySQL, APIs, webhooks, integrations, and production WordPress systems.">
+  <meta property="og:url" content="https://katariatarun69.github.io/Portfolio/">
+  <meta property="og:image" content="https://katariatarun69.github.io/Portfolio/assets/tarun-cutout.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tarun Kataria — Backend Developer | PHP · APIs · WordPress">
+  <meta name="twitter:description" content="Backend developer specializing in PHP, MySQL, APIs, webhooks, integrations, and production WordPress systems.">
+  <meta name="twitter:image" content="https://katariatarun69.github.io/Portfolio/assets/tarun-cutout.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <noscript><style>.reveal,.reveal-stagger,.reveal-stagger>*{opacity:1!important;transform:none!important}.hero h1 .line span,.hero-status,.hero-row,.hero-actions{opacity:1!important;transform:none!important}</style></noscript>
 </head>
+
 <body>
 
-<a href="#main" class="skip-link">Skip to content</a>
+  <a href="#main" class="skip-link">Skip to content</a>
 
-<div class="bg-fx" aria-hidden="true">
-  <div class="bg-glow"></div>
-  <div class="bg-grid"></div>
-  <div class="bg-grain"></div>
-</div>
-
-<div class="cursor" id="cursor" aria-hidden="true"></div>
-
-<!-- NAV -->
-<nav class="nav" id="nav">
-  <div class="container">
-    <a href="#top" class="brand"><span class="dot"></span> TK / backend</a>
-    <div class="nav-links" id="navLinks">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <a href="#contact" class="nav-cta">Start a project →</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  <div class="bg-fx" aria-hidden="true">
+    <div class="bg-glow"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-grain"></div>
   </div>
-</nav>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#work">Work</a>
-  <a href="#about">About</a>
-  <a href="#experience">Experience</a>
-  <a href="#contact">Contact</a>
-</div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
 
-<main id="main">
-
-<!-- HERO -->
-<section class="hero" id="top">
-  <div class="container" style="position:relative;">
-
-    <div class="hero-portrait" aria-hidden="true">
-      <img src="assets/tarun-cutout.png" alt="" width="369" height="468" loading="eager">
-      <div class="hero-portrait-fade"></div>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <a href="#top" class="brand"><span class="dot"></span> TK / backend</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a href="#contact" class="nav-cta">Let's connect →</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
     </div>
+  </nav>
 
-    <!-- <div class="hero-float" style="top:8%; right:5%;" aria-hidden="true">webhook.verify() ✓</div>
-    <div class="hero-float" style="bottom:10%; right:7%; animation-delay:2s;" aria-hidden="true">status: 200</div> -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-    <div class="hero-content">
-      <div class="hero-status"><span class="dot"></span> Open to backend and WordPress work</div>
+  <main id="main">
 
-      <h1>
-        <span class="line"><span>Backend engineer</span></span>
-        <span class="line"><span class="muted">for</span> <span class="accent-word">WordPress</span></span>
-        <span class="line"><span>at production scale.</span></span>
-      </h1>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container" style="position:relative;">
 
-      <div class="hero-row">
-        <p class="hero-desc">
-          I'm <strong>Tarun Kataria</strong>, a backend developer focused on WordPress and WooCommerce. I build custom plugins, PHP backends, and the integrations that connect a site to the tools around it.
-        </p>
-        <div class="hero-actions" style="margin-top:0;">
-          <a href="#work" class="btn btn-primary">View selected work <span class="btn-arrow">→</span></a>
-          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        <div class="hero-portrait" aria-hidden="true">
+          <picture>
+            <source srcset="assets/tarun-cutout.webp" type="image/webp">
+            <img src="assets/tarun-cutout.png" alt="" width="455" height="599" loading="eager" decoding="async">
+          </picture>
+          <div class="hero-portrait-fade"></div>
+        </div>
+
+
+        <div class="hero-content">
+          <div class="hero-status"><span class="dot"></span> Open to Backend / PHP Developer roles</div>
+
+          <h1>
+            <span class="line"><span>Backend Developer</span></span>
+            <span class="line"><span class="muted">for</span> <span class="accent-word">WordPress</span></span>
+            <span class="line"><span>at production scale.</span></span>
+          </h1>
+
+          <div class="hero-row">
+            <p class="hero-desc">
+              I'm <strong>Tarun Kataria</strong>, a backend developer working with PHP, MySQL, APIs, webhooks, and
+              integrations. I build custom backend systems that handle real-world business logic, automation, and
+              third-party services.
+            </p>
+            <div class="hero-actions" style="margin-top:0;">
+              <a href="#work" class="btn btn-primary">View selected work <span class="btn-arrow">→</span></a>
+              <a href="#contact" class="btn btn-ghost">Get in touch</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- WEBHOOK FEED MARQUEE -->
-<div class="feed-wrap" role="img" aria-label="Decorative animated feed of example integration events">
-  <div class="feed-track" id="feedTrack"></div>
-</div>
-
-<!-- WORK -->
-<section class="section-pad" id="work">
-  <div class="container">
-    <div class="reveal">
-      <div class="eyebrow">Selected work</div>
-      <h2 class="section-title">Production systems, not portfolio pieces.</h2>
-      <p class="section-sub">Four projects built for real clients: a recruitment platform, a WooCommerce configurator, a Stripe payment pipeline, and a property listing system with multi-channel notifications.</p>
+    <!-- WEBHOOK FEED MARQUEE -->
+    <div class="feed-wrap" role="img" aria-label="Decorative animated feed of example integration events">
+      <div class="feed-track" id="feedTrack"></div>
     </div>
 
-    <div class="work-list">
+    <!-- WORK -->
+    <section class="section-pad" id="work">
+      <div class="container">
+        <div class="reveal">
+          <div class="eyebrow">Selected work</div>
+          <h2 class="section-title">Production systems, not portfolio pieces.</h2>
+          <p class="section-sub">Four client platforms, each solving a different problem: a hospitality recruitment job
+            board, a WooCommerce configurator, an event payments
+            pipeline, and a property listing system with multi-channel notifications. All running in production.</p>
+        </div>
 
-      <!-- PROJECT 1 -->
-      <article class="project reveal">
-        <div class="project-num">01</div>
-        <div class="project-main">
-          <div>
-            <div class="project-head">
-              <h3 class="project-name">ThailandHotelJobs.com</h3>
-              <div class="project-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 19L19 5M19 5H8M19 5V16" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            </div>
-            <p class="project-desc">A regional recruitment platform built on top of WPJobBoard, with custom employer and candidate workflows and privacy-gated access to candidate contact details.</p>
-            <div class="project-stack">
-              <span class="tag">WordPress</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">ACF</span><span class="tag">AJAX</span><span class="tag">WPJobBoard</span><span class="tag">WP Rocket</span>
-            </div>
-            <button class="project-toggle" aria-expanded="false" data-target="case-1">
-              <span class="plus">+</span> <span class="toggle-label">Read the case study</span>
-            </button>
-            <div class="case-study" id="case-1">
-              <div class="case-study-inner">
-                <div class="case-grid">
-                  <div class="case-block">
-                    <h4>Problem</h4>
-                    <p>WPJobBoard covered basic listings out of the box, but the client needed employer approval workflows, featured placements, and a way to keep candidate data private until an employer requested access — none of which the plugin supported natively.</p>
-                  </div>
-                  <div class="case-block">
-                    <h4>Solution</h4>
-                    <p>Extended WPJobBoard with a custom PHP layer covering both sides of the marketplace. The goal was to keep the plugin's existing listing and search intact while adding the workflow logic that wasn't there.</p>
-                  </div>
-                  <div class="case-block">
-                    <h4>What I built</h4>
-                    <ul>
-                      <li>Employer dashboard: profiles, posting limits, approval flow, featured slots, extra job-slot requests</li>
-                      <li>Candidate ecosystem: registration, profiles, saved jobs, alerts, anonymized privacy mode</li>
-                      <li>Custom database tables for contact requests and saved candidates</li>
-                      <li>AJAX-driven dashboard interactions and custom user roles/capabilities</li>
-                    </ul>
-                  </div>
-                  <div class="case-block">
-                    <h4>Result</h4>
-                    <p>Shipped from staging to production working alongside UI/UX and QA. The privacy-gated contact request system ended up being the feature that set the platform apart.</p>
+        <div class="work-list">
+
+          <!-- PROJECT 1 -->
+          <article class="project reveal">
+            <div class="project-num">01</div>
+            <div class="project-main">
+              <div>
+                <div class="project-head">
+                  <h3 class="project-name">ThailandHotelJobs.com</h3>
+                  <a class="project-arrow" href="https://thailandhoteljobs.com" target="_blank" rel="noopener"
+                    aria-label="Visit ThailandHotelJobs.com">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      <path d="M5 19L19 5M19 5H8M19 5V16" stroke-width="1.6" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                </div>
+                <p class="project-desc">A hospitality job board and recruitment platform for the Thai hotel industry,
+                  built on WordPress and WPJobBoard. Two connected systems: employers post jobs and receive
+                  applications, candidates register and are discovered through an anonymized search with a contact
+                  request workflow, job alerts, and an AI job description generator.</p>
+                <div class="project-stack">
+                  <span class="tag">WordPress</span><span class="tag">PHP</span><span class="tag">WPJobBoard</span><span
+                    class="tag">MySQL</span><span class="tag">Custom DB Tables</span><span class="tag">AJAX</span><span
+                    class="tag">WP-Cron</span><span class="tag">OpenAI API</span><span class="tag">Weglot</span><span
+                    class="tag">WP Rocket</span><span class="tag">SMTP</span>
+                </div>
+                <button class="project-toggle" aria-expanded="false" aria-controls="case-1" data-target="case-1">
+                  <span class="plus">+</span> <span class="toggle-label">Read the case study</span>
+                </button>
+                <div class="case-study" id="case-1">
+                  <div class="case-study-inner">
+                    <div class="case-grid">
+
+                      <div class="case-block full">
+                        <h4>Context</h4>
+                        <p>A job board for the Thai hospitality industry, built on WordPress and WPJobBoard across two
+                          delivery phases. Employers post jobs and receive applications by email. Candidates register,
+                          build a profile, and are found by employers through an anonymized search. The platform is
+                          bilingual (Thai and English) and the majority of traffic is mobile.</p>
+                      </div>
+
+                      <div class="case-block">
+                        <h4>Foundation</h4>
+                        <p>The job board runs on a custom theme with WPJobBoard extended throughout. Employers register
+                          through a custom flow with server and client validation, auto-generated usernames, terms
+                          agreement tracking, and a token-based email verification step before the account unlocks.
+                          Company profiles are set up through a dedicated screen, validated, and auto-activated on first
+                          save with a generated slug.</p>
+                      </div>
+
+                      <div class="case-block">
+                        <h4>Employer job flow</h4>
+                        <ul>
+                          <li>Structured job posting form with dependent Department → Job Title dropdowns and an "Other"
+                            free-text fallback</li>
+                          <li>Five-job limit per employer session, with an "Add More Jobs" path that flags the account
+                            for an offline approval conversation</li>
+                          <li>Jobs publish as drafts and go live once approved by an admin</li>
+                          <li>Two-week active window per job, with a renewal flow when it lapses</li>
+                          <li>Apply-email routing that uses a per-job override address when set, otherwise falls back to
+                            the company's primary contact email</li>
+                          <li>Featured employer status with a 15-day expiry, tied to the Professional plan and
+                            manageable from the user edit screen or a Users list quick action</li>
+                          <li>Extra job slot system: admins can grant +1 posting slot for 15 days on top of the plan
+                            limit, with a dedicated admin page</li>
+                        </ul>
+                      </div>
+
+                      <div class="case-block">
+                        <h4>Candidate system</h4>
+                        <ul>
+                          <li>Registration with PDPA consent validated on both client and server, followed by auto-login
+                            and a redirect to the dashboard</li>
+                          <li>Profile completion algorithm scored across 11 weighted fields, returning a 0 to 100
+                            completion value used across the dashboard</li>
+                          <li>Candidate dashboard with Resume, Applications, Saved Jobs, Job Alerts, Privacy Settings,
+                            Change Password, and Account Settings</li>
+                          <li>Application list with pagination and single-query job enrichment to avoid N+1 lookups</li>
+                          <li>Account deactivation as a soft state, plus permanent deletion that removes the WPJobBoard
+                            resume, meta rows, applications, contact requests, and saved-candidate records in one pass
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="case-block">
+                        <h4>Privacy and contact requests</h4>
+                        <p>The core differentiator. A candidate's profile can be Private or Public, and the candidate's
+                          chosen setting always takes priority.</p>
+                        <ul>
+                          <li>Private profile: appears in employer search with the current employer hidden, contact
+                            details hidden, and previous employers, titles, experience, languages, and desired role
+                            visible</li>
+                          <li>Public profile: full details visible and the employer can contact the candidate directly
+                          </li>
+                          <li>Contact request workflow stored in a custom table with a unique constraint on
+                            <code>(employer_id, candidate_id)</code>, so the database itself enforces one request per
+                            pair rather than relying on application checks
+                          </li>
+                          <li>Statuses: pending, accepted, declined. Declining permanently closes the pair. Accepting
+                            reveals contact details on both sides and access survives the candidate switching back to
+                            Private</li>
+                          <li>AJAX send and respond handlers with nonce and role checks, plus email notifications to
+                            both parties on accept and decline</li>
+                        </ul>
+                      </div>
+
+                      <div class="case-block">
+                        <h4>Employer candidate search and saved candidates</h4>
+                        <ul>
+                          <li>Anonymized candidate cards showing previous employers, titles, departments, property
+                            types, experience, languages, and desired role, with current employer and all personal
+                            contact details withheld</li>
+                          <li>Filters on location, department, experience, English level, years of experience, and
+                            property type, with Department and Job Title as dependent dropdowns against the same master
+                            position list used on the posting side</li>
+                          <li>Saved candidates stored in a custom table with a unique constraint on
+                            <code>(employer_user_id, candidate_user_id)</code>, toggled via AJAX and cleaned up on user
+                            deletion
+                          </li>
+                          <li>Saved jobs on the candidate side backed by WPJobBoard's existing shortlist table</li>
+                        </ul>
+                      </div>
+
+                      <div class="case-block">
+                        <h4>Job alerts engine</h4>
+                        <p>A custom alerting system on top of the candidate preferences, with three delivery modes:
+                          instant, daily, and weekly.</p>
+                        <ul>
+                          <li>Shared query builder used by the alerts list, the sidebar badge count, and the email
+                            engine, so matching rules stay in one place</li>
+                          <li>Dedup table with a unique key on <code>(user_id, job_id)</code>, so a retry or a race
+                            condition cannot produce a second email regardless of application logic</li>
+                          <li>Cron schedule: a five-minute sweep for instant alerts, a daily digest at 08:00 site time,
+                            and a weekly digest scheduled daily but gated to Monday so a missed week self-corrects</li>
+                          <li>Unsubscribe links use a hashed token verified with <code>hash_equals</code>, and only stop
+                            emails without clearing the candidate's saved preferences</li>
+                          <li>Instant alerts skip candidates whose email is unverified or whose account is deactivated
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="case-block">
+                        <h4>AI job description generator</h4>
+                        <ul>
+                          <li>OpenAI integration (GPT-4o-mini) that fills the Job Description and Requirements fields
+                            from the posting form in one click</li>
+                          <li>Admin settings page under the Job Board menu with editable prompts and eight merge tags:
+                            job title, department, location, job type, salary, benefits, other benefits, and company
+                            name</li>
+                          <li>If the requirements call fails, the description is still returned rather than discarding
+                            the work</li>
+                          <li>Response is passed through <code>wp_kses_post()</code> before insertion, and the button
+                            only renders when an API key is configured</li>
+                          <li>Dependent dropdowns and the AI generator shipped together, and both are wired so
+                            WPJobBoard's own validation and save path are untouched</li>
+                        </ul>
+                      </div>
+
+                      <div class="case-block full">
+                        <h4>Engineering notes</h4>
+                        <p>Two pieces of custom engineering are worth calling out.</p>
+                        <p><strong>Deferred mail pipeline.</strong> Job applications and candidate registrations were
+                          spending 12 to 14 seconds inside synchronous <code>wp_mail()</code> calls, which the user
+                          waited through before seeing a redirect. I wrote a must-use plugin that hooks
+                          <code>pre_wp_mail</code> on the slow POSTs, queues the payloads, closes the connection with
+                          <code>litespeed_finish_request()</code> or <code>fastcgi_finish_request()</code>, and sends
+                          the queue in the background. Attachments are copied out of the PHP temp directory first so
+                          they survive the request ending. A cron fallback covers hosts without a finish-request
+                          function. Measured result: candidate registration went from 13.4s to 0.52s, and job
+                          application from around 12s to 0.22s.
+                        </p>
+                        <p><strong>Weglot-safe patterns.</strong> Because Weglot translates option labels on
+                          <code>/th/</code> pages, the Department → Job Title logic matches on category ID and slug,
+                          never on the visible label. The same rule applies to the alert query builder. A prefix helper
+                          wraps <code>post_link</code>, <code>page_link</code>, <code>term_link</code>,
+                          <code>paginate_links</code>, and the next/prev navigation so links stay language-correct
+                          without touching Weglot itself.
+                        </p>
+                        <p>The candidate search is locked to logged-in employers only. Job sorting uses a secondary key
+                          on ID so same-day jobs never share a position, and timestamps display "Posted today" for
+                          same-day items and the actual date for older ones.</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div class="project-visual" aria-hidden="true">
+                <span class="glyph tl">01 / platform</span>
+                <div class="mono-flow">
+                  <div>employer.register()</div>
+                  <div>→ verify_email(24h)</div>
+                  <div>→ job.post(limit=5)</div>
+                  <div>→ candidate.search()</div>
+                  <div>→ contact.request()</div>
+                  <div>→ <span class="k">accept</span>/<span class="k">decline</span></div>
+                  <div>alerts.sweep(5m)</div>
+                  <div>→ <span class="v">deferred_mail() ✓</span></div>
+                </div>
+                <span class="glyph br">WPJobBoard · 2 phases</span>
+              </div>
             </div>
-          </div>
-          <div class="project-visual" aria-hidden="true">
-            <span class="glyph tl">01 / recruitment</span>
-            <div class="mono-flow">
-              <div><span class="k">POST</span> /employer/apply</div>
-              <div><span class="k">GET</span> /candidates?private=1</div>
-              <div><span class="k">POST</span> /contact-request</div>
-              <div>→ <span class="v">access_granted</span></div>
-            </div>
-            <span class="glyph br">WPJobBoard core</span>
-          </div>
-        </div>
-      </article>
+          </article>
 
-      <!-- PROJECT 2 -->
-      <article class="project reveal">
-        <div class="project-num">02</div>
-        <div class="project-main">
-          <div>
-            <div class="project-head">
-              <h3 class="project-name">Autopotahy Taso</h3>
-              <div class="project-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 19L19 5M19 5H8M19 5V16" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            </div>
-            <p class="project-desc">A WooCommerce product configurator for seat-cover manufacturing, re-engineered onto PHP 8.3 with dynamic B2B/B2C pricing and freight logic.</p>
-            <div class="project-stack">
-              <span class="tag">WordPress</span><span class="tag">PHP 8.3</span><span class="tag">WooCommerce</span><span class="tag">MySQL</span><span class="tag">ACF</span>
-            </div>
-            <button class="project-toggle" aria-expanded="false" data-target="case-2">
-              <span class="plus">+</span> <span class="toggle-label">Read the case study</span>
-            </button>
-            <div class="case-study" id="case-2">
-              <div class="case-study-inner">
-                <div class="case-grid">
-                  <div class="case-block">
-                    <h4>Problem</h4>
-                    <p>A custom product configurator stopped working after a PHP 8.3 upgrade due to deprecated functions and compatibility issues. The client also needed updated B2B/B2C pricing rules and freight logic added without disrupting what was already in place.</p>
-                  </div>
-                  <div class="case-block">
-                    <h4>Solution</h4>
-                    <p>Re-engineered the Configurator, Material Management, and Freight modules to run cleanly on PHP 8.3 without breaking the pricing and order logic already in production.</p>
-                  </div>
-                  <div class="case-block">
-                    <h4>What I built</h4>
-                    <ul>
-                      <li>Role-based dynamic pricing for B2B vs. B2C customers</li>
-                      <li>Product variations for materials, colors, and sizes wired into cart/checkout</li>
-                      <li>Freight/shipping calculation with separate B2B/B2C tax logic</li>
-                      <li>Custom order email templates and payment webhook handling</li>
-                    </ul>
-                  </div>
-                  <div class="case-block">
-                    <h4>Result</h4>
-                    <p>Brought the configurator up to PHP 8.3 without breaking any of the existing pricing or order logic for B2B or B2C customers.</p>
+          <!-- PROJECT 2 -->
+          <article class="project reveal">
+            <div class="project-num">02</div>
+            <div class="project-main">
+              <div>
+                <div class="project-head">
+                  <h3 class="project-name">Autopotahy Taso</h3>
+                  <a class="project-arrow" href="https://www.autopotahytaso.cz/" target="_blank" rel="noopener"
+                    aria-label="Visit Autopotahy Taso">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      <path d="M5 19L19 5M19 5H8M19 5V16" stroke-width="1.6" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                </div>
+                <p class="project-desc">A full redevelopment of a live Czech e-commerce store for custom seat covers.
+                  Rebuilt on WordPress 6.x and WooCommerce 8.x, with the existing Configurator, Material Management,
+                  Freight/PDF, and B2B/B2C Pricing logic preserved and modernised, then wrapped in a new Bootstrap 5
+                  theme.</p>
+                <div class="project-stack">
+                  <span class="tag">WordPress 6.x</span><span class="tag">PHP 8.3</span><span class="tag">WooCommerce
+                    8.x</span><span class="tag">MySQL 8</span><span class="tag">Bootstrap 5</span><span
+                    class="tag">WPML</span><span class="tag">Wholesale Suite</span><span class="tag">PDF
+                    Invoices</span><span class="tag">Ajax Search</span><span class="tag">Figma</span>
+                </div>
+                <button class="project-toggle" aria-expanded="false" aria-controls="case-2" data-target="case-2">
+                  <span class="plus">+</span> <span class="toggle-label">Read the case study</span>
+                </button>
+                <div class="case-study" id="case-2">
+                  <div class="case-study-inner">
+                    <div class="case-grid">
+                      <div class="case-block">
+                        <h4>Problem</h4>
+                        <p>The client's existing WooCommerce store ran on an outdated WordPress and PHP stack. Its core
+                          value was a custom seat-cover Configurator with Material Management, Freight/PDF generation,
+                          and separate B2C and B2B pricing rules. That logic was tightly coupled to the old codebase and
+                          couldn't survive a standard upgrade. A rebuild was needed that preserved every piece of custom
+                          business logic while modernising the stack and applying a new design.</p>
+                      </div>
+                      <div class="case-block">
+                        <h4>Solution</h4>
+                        <p>Rebuilt the site on WordPress 6.x and WooCommerce 8.x. The Configurator, Material Management,
+                          Freight/PDF, and Pricing modules were re-engineered as bespoke plugins compatible with the new
+                          core. Existing logic was preserved and modernised rather than rewritten, so no features were
+                          lost. A new Bootstrap 5 theme was built from Figma designs, and the legacy catalogue was
+                          migrated with script-assisted checksums.</p>
+                      </div>
+                      <div class="case-block">
+                        <h4>What I built</h4>
+                        <ul>
+                          <li><strong>Core plugin redevelopment:</strong> Configurator, Material Management, and
+                            Freight/PDF modules re-engineered as bespoke plugins compatible with WP 6.x and WooCommerce
+                            8.x, with logic preserved and codebase modernised</li>
+                          <li><strong>B2B/B2C pricing engine:</strong> role-based dynamic pricing with VAT-inclusive
+                            (B2C) and VAT-exclusive plus wholesale discount (B2B) logic, tied into cart and checkout
+                          </li>
+                          <li><strong>Theme implementation:</strong> Figma screens converted to a Bootstrap 5 theme
+                            following a 12-column grid and Google Fonts standards</li>
+                          <li><strong>Data migration:</strong> legacy products, attributes, images, and user roles
+                            exported and imported with script-assisted checksums, plus a final import run at cut-over to
+                            prevent catalogue drift</li>
+                          <li><strong>Third-party integrations:</strong> WooCommerce PDF Invoices, WPML for multilingual
+                            support, Wholesale Suite, Ajax Search, and approved premium add-ons</li>
+                          <li><strong>QA and UAT:</strong> cross-browser (Chrome, Firefox, Safari, Edge), responsive,
+                            performance, security, and regression testing on the Configurator flow; verified B2C and B2B
+                            test orders generate correct PDF invoices</li>
+                        </ul>
+                      </div>
+                      <div class="case-block">
+                        <h4>Result</h4>
+                        <p>Delivered a modernised WooCommerce store on PHP 8.3, WP 6.x, and WooCommerce 8.x without
+                          losing any of the custom Configurator, Material, Freight, or Pricing behaviour the business
+                          depends on. B2C and B2B customers both retained their existing pricing and ordering flows, and
+                          the site now runs on a supported, maintainable stack. Client sign-off on the UAT checklist
+                          completed the project.</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div class="project-visual" aria-hidden="true">
+                <span class="glyph tl">02 / redevelopment</span>
+                <div class="mono-flow">
+                  <div>wp 6.x + woo 8.x</div>
+                  <div>→ configurator.rebuild()</div>
+                  <div>→ material + freight/pdf</div>
+                  <div>→ <span class="k">b2b</span>/<span class="k">b2c</span> price_rule()</div>
+                  <div>→ <span class="v">migration.checksum() ✓</span></div>
+                </div>
+                <span class="glyph br">WP 6.x · Woo 8.x · PHP 8.3</span>
+              </div>
             </div>
-          </div>
-          <div class="project-visual" aria-hidden="true">
-            <span class="glyph tl">02 / e-commerce</span>
-            <div class="mono-flow">
-              <div>role: <span class="k">b2b</span> → price_rule()</div>
-              <div>role: <span class="k">b2c</span> → price_rule()</div>
-              <div>freight.calc(zone)</div>
-              <div>→ <span class="v">php 8.3 ✓</span></div>
-            </div>
-            <span class="glyph br">Configurator module</span>
-          </div>
-        </div>
-      </article>
+          </article>
 
-      <!-- PROJECT 3 -->
-      <article class="project reveal">
-        <div class="project-num">03</div>
-        <div class="project-main">
-          <div>
-            <div class="project-head">
-              <h3 class="project-name">Ecommastery 2026</h3>
-              <div class="project-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 19L19 5M19 5H8M19 5V16" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            </div>
-            <p class="project-desc">An event-streaming platform where I handled the Stripe payment integration and built the webhook pipeline that turns a completed payment into stream access automatically.</p>
-            <div class="project-stack">
-              <span class="tag">WordPress</span><span class="tag">PHP</span><span class="tag">Stripe API</span><span class="tag">Google Sheets API</span><span class="tag">Webhooks</span>
-            </div>
-            <button class="project-toggle" aria-expanded="false" data-target="case-3">
-              <span class="plus">+</span> <span class="toggle-label">Read the case study</span>
-            </button>
-            <div class="case-study" id="case-3">
-              <div class="case-study-inner">
-                <div class="case-grid">
-                  <div class="case-block">
-                    <h4>Problem</h4>
-                    <p>Access to the paid event stream needed to be tied directly to which ticket a customer bought, with no manual step between payment and access.</p>
-                  </div>
-                  <div class="case-block">
-                    <h4>Solution</h4>
-                    <p>Built the Stripe payment flow and a webhook listener that turns a successful payment straight into a provisioned user account with the correct access level.</p>
-                  </div>
-                  <div class="case-block">
-                    <h4>What I built</h4>
-                    <ul>
-                      <li>Stripe checkout integration for ticket-based purchases</li>
-                      <li>Stripe webhook handler that logs ticket/access data to Google Sheets</li>
-                      <li>Automatic user creation and access-level assignment per ticket type</li>
-                      <li>Stream-embed and access-control logic gated to paid users</li>
-                    </ul>
-                  </div>
-                  <div class="case-block">
-                    <h4>Result</h4>
-                    <p>The entire flow from payment to access runs automatically. I took this from requirements to production independently.</p>
+          <!-- PROJECT 3 -->
+          <article class="project reveal">
+            <div class="project-num">03</div>
+            <div class="project-main">
+              <div>
+                <div class="project-head">
+                  <h3 class="project-name">Ecommastery 2026</h3>
+                  <a class="project-arrow" href="https://ecommastery.live/" target="_blank" rel="noopener"
+                    aria-label="Visit Ecommastery 2026">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      <path d="M5 19L19 5M19 5H8M19 5V16" stroke-width="1.6" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                </div>
+                <p class="project-desc">Migration and refresh of a live event-streaming platform, plus a Stripe-driven
+                  access pipeline built from scratch. Payments write to Google Sheets through a webhook, a sync cron
+                  turns Sheet rows into WordPress users, and a magic-link login system gates two stages of stream access
+                  by ticket type.</p>
+                <div class="project-stack">
+                  <span class="tag">WordPress</span><span class="tag">PHP</span><span class="tag">Stripe API</span><span
+                    class="tag">Webhooks</span><span class="tag">Google Sheets</span><span class="tag">Apps
+                    Script</span><span class="tag">WP-Cron</span><span class="tag">REST API</span><span
+                    class="tag">Bluehost</span>
+                </div>
+                <button class="project-toggle" aria-expanded="false" aria-controls="case-3" data-target="case-3">
+                  <span class="plus">+</span> <span class="toggle-label">Read the case study</span>
+                </button>
+                <div class="case-study" id="case-3">
+                  <div class="case-study-inner">
+                    <div class="case-grid">
+                      <div class="case-block">
+                        <h4>Problem</h4>
+                        <p>The client ran a paid event-streaming site in 2025 with access managed manually through a
+                          Google Sheet. For the 2026 edition, the site needed to move to a new domain, get updated
+                          visuals and stream URLs, and support two-stage access based on ticket type. The bigger change
+                          was payment: last year Stripe was skipped entirely, and this year access had to update
+                          automatically after checkout without removing the Sheet from the workflow.</p>
+                      </div>
+                      <div class="case-block">
+                        <h4>Solution</h4>
+                        <p>Migrated the codebase from the old domain to the new one on the same Bluehost account and
+                          kept the Google Sheet as the single source of truth for access. Built a three-plugin pipeline:
+                          a Stripe webhook receives payment events, verifies signatures, and appends rows to the Sheet;
+                          a WP-Cron job reads the Sheet every 15 minutes and creates or updates WordPress users with the
+                          correct access flags; a custom user-fields plugin exposes those flags in the admin and
+                          generates magic login links with 18-hour expiry.</p>
+                      </div>
+                      <div class="case-block">
+                        <h4>What I built</h4>
+                        <ul>
+                          <li><strong>Stripe webhook plugin:</strong> custom REST endpoint at
+                            <code>stripe/v1/webhook</code>, manual HMAC-SHA256 signature verification without the Stripe
+                            SDK, idempotency check on the buyer email, and a 24-hour transient queue for confirmation
+                            emails when the user doesn't exist yet
+                          </li>
+                          <li><strong>Sheet sync plugin:</strong> custom 15-minute WP-Cron schedule that reads the
+                            Sheet, looks up users by <code>wp_user_id</code> first and email second, creates new users
+                            with unique usernames, backfills the user ID to the Sheet, and propagates email and name
+                            changes back to WordPress</li>
+                          <li><strong>Access flag logic:</strong> <code>elevate_360_access</code>,
+                            <code>bdss_access</code>, and <code>access_to_both</code> meta fields, with auto-derivation
+                            so a "both" ticket forces both stage flags to Y
+                          </li>
+                          <li><strong>Magic link login:</strong> UUID4 tokens with 18-hour expiry, AJAX generation from
+                            the admin profile screen with nonce and capability checks, and token validation handled on
+                            <code>template_redirect</code>
+                          </li>
+                          <li><strong>Admin user fields plugin:</strong> adds access flags, three IP allowlist fields,
+                            and the generated login URL to every WordPress user profile</li>
+                          <li><strong>Two-stage stream gating:</strong> Main Stage and BDSS Stage embeds updated with
+                            new URLs, visibility driven by ticket type and the April 9 to 11 event dates</li>
+                          <li><strong>Code migration:</strong> copied all existing code and configuration to the new
+                            domain and verified parity with the 2025 site before layering the new payment pipeline on
+                            top</li>
+                        </ul>
+                      </div>
+                      <div class="case-block">
+                        <h4>Result</h4>
+                        <p>Payment to access now runs end to end without manual steps. A buyer pays through Stripe, the
+                          webhook appends their row to the Sheet, the sync cron creates the WordPress user with the
+                          right access flags, and a magic link email lands in their inbox. The client can still edit the
+                          Sheet manually at any time, so the existing workflow stays intact while the automation sits
+                          underneath it.</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div class="project-visual" aria-hidden="true">
+                <span class="glyph tl">03 / automation</span>
+                <div class="mono-flow">
+                  <div>stripe.checkout.completed</div>
+                  <div>→ verify_hmac_sha256()</div>
+                  <div>→ sheets.append(row)</div>
+                  <div>→ cron.read(15m)</div>
+                  <div>→ wp_create_user()</div>
+                  <div>→ magic_link(18h)</div>
+                  <div>→ access: <span class="v">main + bdss ✓</span></div>
+                </div>
+                <span class="glyph br">Stripe → Sheets → WP</span>
+              </div>
             </div>
-          </div>
-          <div class="project-visual" aria-hidden="true">
-            <span class="glyph tl">03 / automation</span>
-            <div class="mono-flow">
-              <div><span class="k">webhook</span> payment.succeeded</div>
-              <div>→ sheets.append(row)</div>
-              <div>→ user.create()</div>
-              <div>→ <span class="v">access: granted</span></div>
-            </div>
-            <span class="glyph br">Stripe → Sheets</span>
-          </div>
-        </div>
-      </article>
+          </article>
 
-      <!-- PROJECT 4 -->
-      <article class="project reveal">
-        <div class="project-num">04</div>
-        <div class="project-main">
-          <div>
-            <div class="project-head">
-              <h3 class="project-name">Rajeev Saini — Property Listings</h3>
-              <div class="project-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 19L19 5M19 5H8M19 5V16" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            </div>
-            <p class="project-desc">A custom WordPress plugin that takes a property submission and handles everything from there: brochure generation, CRM sync, and outbound notifications across multiple channels.</p>
-            <div class="project-stack">
-              <span class="tag">WordPress</span><span class="tag">PHP</span><span class="tag">ACF</span><span class="tag">WhatsApp API</span><span class="tag">Google Sheets</span><span class="tag">Klaviyo</span><span class="tag">Expedify CRM</span>
-            </div>
-            <button class="project-toggle" aria-expanded="false" data-target="case-4">
-              <span class="plus">+</span> <span class="toggle-label">Read the case study</span>
-            </button>
-            <div class="case-study" id="case-4">
-              <div class="case-study-inner">
-                <div class="case-grid">
-                  <div class="case-block">
-                    <h4>Problem</h4>
-                    <p>Adding a new property meant manually creating a brochure, updating a tracker, and notifying leads across several channels. It was time-consuming and steps got missed.</p>
-                  </div>
-                  <div class="case-block">
-                    <h4>Solution</h4>
-                    <p>A custom WordPress plugin that handles the whole thing from a single form submission: generates the listing, creates the brochure, and sends the notifications without anyone having to touch multiple tools.</p>
-                  </div>
-                  <div class="case-block">
-                    <h4>What I built</h4>
-                    <ul>
-                      <li>PHP + Dompdf brochure generation in PNG/JPG and PDF</li>
-                      <li>Sub-admin property management interface built on ACF</li>
-                      <li>WhatsApp Business API notifications with CTA buttons and dynamic property URLs</li>
-                      <li>Google Sheets lead tracking, Klaviyo list automation, and Expedify CRM webhook triggers</li>
-                    </ul>
-                  </div>
-                  <div class="case-block">
-                    <h4>Result</h4>
-                    <p>One form submission now triggers brochure generation, CRM sync, Klaviyo list updates, and WhatsApp notification. No manual steps, no handoffs between tools.</p>
+          <!-- PROJECT 4 -->
+          <article class="project reveal">
+            <div class="project-num">04</div>
+            <div class="project-main">
+              <div>
+                <div class="project-head">
+                  <h3 class="project-name">Property Buyers Australia</h3>
+                  <a class="project-arrow" href="https://propertybuyersaustralia.au" target="_blank" rel="noopener"
+                    aria-label="Visit Property Buyers Australia">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      <path d="M5 19L19 5M19 5H8M19 5V16" stroke-width="1.6" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                </div>
+
+                <p class="project-desc">Two live property platforms for the same client. The first automates property
+                  listing, brochure generation, and WhatsApp lead notifications. The second is a paid property-check
+                  service with a full request, approval, and refund workflow behind Stripe. Both run on WordPress, both
+                  built from custom plugins and a custom theme.</p>
+                <div class="project-stack">
+                  <span class="tag">WordPress</span><span class="tag">PHP</span><span class="tag">Dompdf</span><span
+                    class="tag">GD Library</span><span class="tag">ACF</span><span class="tag">Stripe API</span><span
+                    class="tag">Expedify CRM</span><span class="tag">Contact Form 7</span><span
+                    class="tag">Webhooks</span>
+                </div>
+                <button class="project-toggle" aria-expanded="false" aria-controls="case-4" data-target="case-4">
+                  <span class="plus">+</span> <span class="toggle-label">Read the case study</span>
+                </button>
+                <div class="case-study" id="case-4">
+                  <div class="case-study-inner">
+                    <div class="case-grid">
+
+                      <div class="case-block">
+                        <h4>Context</h4>
+                        <p>Two separate sites for the same client. Property Buyers Australia lists properties and
+                          captures leads. Property Self Check takes paid property inspection requests and manages them
+                          through an approval pipeline. Each site has its own WordPress install, its own custom code,
+                          and its own user model.</p>
+                      </div>
+
+                      <div class="case-block">
+                        <h4>Site 1: Property Buyers Australia</h4>
+                        <p>The client needed a way for non-admin staff to add property listings without touching the
+                          WordPress backend. From a single front-end form, a listing should appear on the site complete
+                          with a PDF brochure, a branded featured image, and a WhatsApp notification to subscribed
+                          contacts.</p>
+                      </div>
+
+                      <div class="case-block">
+                        <h4>What I built (Site 1)</h4>
+                        <ul>
+                          <li><strong>Custom sub-admin role:</strong> a scoped "Property Sub-Admin" role created on
+                            plugin activation, with read, create, publish, and delete capabilities limited to listings
+                          </li>
+                          <li><strong>Front-end submission form:</strong> shortcode-driven form on the
+                            <code>/add-property/</code> page, collecting property name, suburb, bedrooms, bathrooms,
+                            land size, rental, price, and description, protected by nonce, capability, and sanitisation
+                            checks
+                          </li>
+                          <li><strong>PDF brochure generation:</strong> one-page A4 brochure built with Dompdf in a
+                            handwritten note style, saved to the Media Library, and pushed to the user as
+                            <code>property_&lt;ID&gt;.pdf</code> after submission
+                          </li>
+                          <li><strong>Branded featured image:</strong> PHP GD renders property details onto a
+                            pre-designed frame using four bundled fonts (Edu SA Beginner, Playfair Display, Dancing
+                            Script, Open Sans), sets it as the post thumbnail, and regenerates it automatically whenever
+                            ACF saves a property</li>
+                          <li><strong>Status-aware footer:</strong> the generated image reads "Property For Sale" or
+                            "Property Sold" based on an ACF <code>property_status</code> field, with a lock to prevent
+                            repeated regeneration and a manual regenerate action in the admin</li>
+                          <li><strong>WhatsApp notifications:</strong> a separate notifier plugin hooks
+                            <code>publish_property</code> and sends the property slug to an Expedify webhook, which
+                            delivers the WhatsApp message with the property link; a <code>_expedify_notified</code> meta
+                            flag prevents duplicate sends on edits
+                          </li>
+                          <li><strong>Lead capture:</strong> Contact Form 7 enquiries create contacts in the Expedify
+                            CRM with name, email, phone, plus the enquiry subject, message, and originating property
+                            title and URL</li>
+                        </ul>
+                      </div>
+
+                      <div class="case-block">
+                        <h4>Site 2: Property Self Check</h4>
+                        <p>The client wanted a service where a customer could pay for a property inspection, upload
+                          supporting details, and track the request through to delivery. Behind the scenes, an admin
+                          team handled documents and a super admin approved or rejected each request, including refunds.
+                        </p>
+                      </div>
+
+                      <div class="case-block">
+                        <h4>What I built (Site 2)</h4>
+                        <ul>
+                          <li><strong>Custom theme:</strong> built from scratch on a clean WordPress install, with ACF
+                            powering the dynamic homepage content</li>
+                          <li><strong>Three-tier role model:</strong> <code>User</code>, <code>Admin</code>, and
+                            <code>Super Admin</code>, each with its own dashboard, permissions, and visible data
+                          </li>
+                          <li><strong>User dashboard:</strong> property check requests, status tracking (In Review,
+                            Pending, Approved, Rejected), star ratings with notes, and a refund request flow</li>
+                          <li><strong>Stripe payment:</strong> checkout popup for the property check fee, tied to the
+                            request creation flow</li>
+                          <li><strong>Admin dashboard:</strong> request list with counts and status filters, daily,
+                            weekly, and monthly views, search, request detail view, and a "send to super admin" action
+                          </li>
+                          <li><strong>Document handling:</strong> multi-file PDF, DOC, and DOCX upload with per-file
+                            descriptions, both on the admin and super admin sides, plus file removal</li>
+                          <li><strong>Approval workflow:</strong> super admin reviews requests, approves or rejects
+                            them, and status changes propagate back to the user dashboard</li>
+                          <li><strong>Email tab:</strong> approved requests only, with an editable template, PDF
+                            attachment, and resend capability</li>
+                          <li><strong>Refund management:</strong> user-side submission with an amount, super admin
+                            review with approve or reject actions</li>
+                        </ul>
+                      </div>
+
+                      <div class="case-block">
+                        <h4>Notes</h4>
+                        <p>On Site 1, the WhatsApp integration originally called Meta's Cloud API directly. I replaced
+                          it with an Expedify webhook because the managed layer handled retries, templating, and
+                          duplicate suppression more reliably than the direct API. On Site 2, the refund policy was
+                          still being finalised by the client at handoff, so the workflow supports approve or reject
+                          without enforcing a specific fee rule.</p>
+                      </div>
+
+                    </div>
                   </div>
                 </div>
               </div>
+              <div class="project-visual" aria-hidden="true">
+                <span class="glyph tl">04 / property</span>
+                <div class="mono-flow">
+                  <div>site 1: form.submit()</div>
+                  <div>→ dompdf.render()</div>
+                  <div>→ gd.render_frame()</div>
+                  <div>→ expedify.whatsapp()</div>
+                  <div>site 2: stripe.checkout()</div>
+                  <div>→ request.create()</div>
+                  <div>→ admin → super_admin</div>
+                  <div>→ <span class="v">approved ✓</span></div>
+                </div>
+                <span class="glyph br">2 sites · 1 client</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES -->
+    <section class="section-pad"
+      style="background:var(--bg-1); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+      <div class="container">
+        <div class="reveal">
+          <div class="eyebrow">What I build</div>
+          <h2 class="section-title">The backend layer, end to end.</h2>
+        </div>
+
+        <div class="bento reveal-stagger">
+          <div class="bento-card big">
+            <div class="card-icon">{ }</div>
+            <div>
+              <h3>Custom WordPress and WPJobBoard development</h3>
+              <p>Custom plugins, child themes, and deep extensions to existing platforms. Hooks, filters, custom post
+                types, custom user roles, ACF fields, and admin interfaces built to extend what's already there rather
+                than rebuild it.</p>
+              <div class="card-tags"><span>PHP</span><span>WPJobBoard</span><span>ACF</span><span>Custom
+                  Roles</span><span>CPTs</span></div>
             </div>
           </div>
-          <div class="project-visual" aria-hidden="true">
-            <span class="glyph tl">04 / integrations</span>
-            <div class="mono-flow">
-              <div>form.submit()</div>
-              <div>→ dompdf.render()</div>
-              <div>→ whatsapp.send() + klaviyo.add()</div>
-              <div>→ <span class="v">crm: synced</span></div>
+          <div class="bento-card">
+            <div class="card-icon">↻</div>
+            <div>
+              <h3>Webhook and event pipelines</h3>
+              <p>Payment events, sheet syncs, and messaging triggers wired end to end. Stripe signatures verified in
+                PHP, Google Sheets updated through Apps Script, and WP-Cron jobs that pick up where a webhook leaves
+                off.</p>
             </div>
-            <span class="glyph br">Expedify ↔ WhatsApp</span>
+          </div>
+          <div class="bento-card">
+            <div class="card-icon">$</div>
+            <div>
+              <h3>WooCommerce and pricing logic</h3>
+              <p>B2B/B2C pricing rules, freight calculation, custom checkout flows, and order processing on stores with
+                real customers. Re-engineered a WooCommerce configurator onto PHP 8.3 without losing any pricing
+                behaviour.</p>
+            </div>
+          </div>
+          <div class="bento-card wide">
+            <div class="card-icon">⇄</div>
+            <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px;">
+              <div>
+                <h3>API and third-party integrations</h3>
+                <p>Stripe, OpenAI, WhatsApp Business API, Google Sheets, Weglot, and Expedify CRM connected through REST
+                  endpoints and webhooks. Integrations that log what went wrong, fail without taking the form down, and
+                  stay configurable from the admin.</p>
+              </div>
+              <div class="card-tags">
+                <span>Stripe</span><span>OpenAI</span><span>WhatsApp</span><span>Sheets</span><span>Weglot</span><span>Expedify</span>
+              </div>
+            </div>
+          </div>
+          <div class="bento-card">
+            <div class="card-icon">◧</div>
+            <div>
+              <h3>Custom database tables</h3>
+              <p>Purpose-built MySQL tables with unique constraints that enforce rules at the database level. Contact
+                requests, saved candidates, and alert deduplication all rely on schema-level integrity, not application
+                checks.</p>
+            </div>
+          </div>
+          <div class="bento-card">
+            <div class="card-icon">⚡</div>
+            <div>
+              <h3>Performance and access control</h3>
+              <p>Deferred mail pipelines that cut form submissions from 12+ seconds to under a second. Caching with WP
+                Rocket and LiteSpeed, nonce and capability checks throughout, and role-based access on every
+                candidate-facing query.</p>
+            </div>
           </div>
         </div>
-      </article>
 
-    </div>
-  </div>
-</section>
-
-<!-- CAPABILITIES -->
-<section class="section-pad" style="background:var(--bg-1); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
-  <div class="container">
-    <div class="reveal">
-      <div class="eyebrow">What I build</div>
-      <h2 class="section-title">The backend layer, end to end.</h2>
-    </div>
-
-    <div class="bento reveal-stagger">
-      <div class="bento-card big">
-        <div class="card-icon">{ }</div>
-        <div>
-          <h3>Custom WordPress &amp; plugin development</h3>
-          <p>Custom plugins, hooks/actions/filters, custom post types and taxonomies, ACF, and template overrides built to extend existing systems cleanly.</p>
-          <div class="card-tags"><span>PHP</span><span>Hooks</span><span>CPTs</span><span>ACF</span></div>
+        <div class="bento reveal-stagger" style="margin-top:20px;">
+          <div class="bento-card wide">
+            <div class="card-icon">◆</div>
+            <div>
+              <h3>Page builders, LMS, and community plugins</h3>
+              <p>Elementor page builds, TutorLMS Pro course structures, BuddyBoss communities, and Polylang multilingual
+                setups. ACF for structured content, WPForms and CF7 for forms, Yoast for SEO, and WP-CLI for scripted
+                operations.</p>
+              <div class="card-tags">
+                <span>Elementor</span><span>TutorLMS
+                  Pro</span><span>BuddyBoss</span><span>Polylang</span><span>WPForms</span><span>Yoast</span><span>WP-CLI</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="bento-card">
-        <div class="card-icon">↻</div>
-        <div>
-          <h3>Webhook automation</h3>
-          <p>Payment, CRM, and messaging webhooks wired into reliable backend workflows.</p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section-pad" id="experience">
+      <div class="container">
+        <div class="reveal">
+          <div class="eyebrow">Experience</div>
+          <h2 class="section-title">1.5+ years across 10–15 production WordPress sites and 8–10 clients.</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-row current reveal">
+            <div class="tl-date">Sep 2025 —<br>Present</div>
+            <div class="tl-body">
+              <h3>Junior Software Engineer <span class="tl-current-badge">Current</span></h3>
+              <span class="tl-org">Deftsoft</span>
+              <p>Backend development across 10–15 production WordPress sites for 8–10 clients: recruitment platforms,
+                WooCommerce stores, event payment pipelines, and property systems.</p>
+              <ul>
+                <li>Custom plugins, child themes, and WPJobBoard extensions using PHP, hooks, filters, WP_Query, ACF,
+                  and custom database tables</li>
+                <li>Integrations with Stripe, OpenAI, WhatsApp Business API, Google Sheets, Weglot, and Expedify CRM via
+                  REST endpoints and webhooks</li>
+                <li>Deferred mail pipelines and WP-Cron jobs, including a queue that cut form submissions from 12+
+                  seconds to under one second</li>
+                <li>Built an AI voice agent pipeline (Vapi, OpenAI, ElevenLabs) with webhook automation into Kajabi for
+                  a college-prep education platform</li>
+                <li>Page builds with Elementor, LMS course structures with TutorLMS Pro, community features with
+                  BuddyBoss, and multilingual setups with Polylang</li>
+                <li>Input validation, sanitization, nonces, capability checks, and role-based access control throughout
+                </li>
+                <li>Staging-to-production deployment: SSH/cPanel, PHP version config, database migrations, backups, and
+                  release workflows</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tl-row reveal">
+            <div class="tl-date">Mar 2025 —<br>Sep 2025</div>
+            <div class="tl-body">
+              <h3>Intern Software Engineer</h3>
+              <span class="tl-org">Deftsoft</span>
+              <p>Started on the production codebase immediately, moving from smaller feature tasks to owning full
+                modules over time.</p>
+              <ul>
+                <li>Followed a feature-branch GitLab workflow with senior code review before merging</li>
+                <li>Worked directly with clients on requirements, demos, and issue triage</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tl-row reveal">
+            <div class="tl-date">Graduated<br>June 2025</div>
+            <div class="tl-body">
+              <h3>B.Tech, Computer Science &amp; Engineering</h3>
+              <span class="tl-org">Rayat Bahra University, Mohali, Punjab · CGPA 7.78/10</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="bento-card">
-        <div class="card-icon">$</div>
-        <div>
-          <h3>WooCommerce logic</h3>
-          <p>Custom pricing, B2B/B2C rules, checkout and order-processing customization.</p>
+    </section>
+
+    <!-- SKILLS ECOSYSTEM -->
+    <section class="section-pad"
+      style="background:var(--bg-1); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+      <div class="container">
+        <div class="reveal">
+          <div class="eyebrow">Technical stack</div>
+          <h2 class="section-title">Hover a technology to see how it connects.</h2>
+        </div>
+
+        <div class="eco reveal" id="ecoWrap">
+
+          <!-- Core -->
+          <div class="eco-category">
+            <div class="eco-cat-label">Core</div>
+            <div class="eco-cat-chips">
+              <span class="chip" data-group="core">PHP</span>
+              <span class="chip" data-group="core">PHP OOP</span>
+              <span class="chip" data-group="core">MySQL / SQL</span>
+              <span class="chip" data-group="core">WordPress</span>
+              <span class="chip" data-group="core">Hooks / Actions / Filters</span>
+              <span class="chip" data-group="core">REST APIs</span>
+              <span class="chip" data-group="core">Webhooks</span>
+              <span class="chip" data-group="core">Git / GitLab</span>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="eco-category">
+            <div class="eco-cat-label">Backend</div>
+            <div class="eco-cat-chips">
+              <span class="chip" data-group="backend">Custom plugins</span>
+              <span class="chip" data-group="backend">WP_Query</span>
+              <span class="chip" data-group="backend">Custom post types &amp; taxonomies</span>
+              <span class="chip" data-group="backend">Custom DB tables</span>
+              <span class="chip" data-group="backend">Query optimization</span>
+              <span class="chip" data-group="backend">AJAX</span>
+              <span class="chip" data-group="backend">WP-Cron</span>
+              <span class="chip" data-group="backend">WP-CLI</span>
+              <span class="chip" data-group="backend">API integrations</span>
+            </div>
+          </div>
+
+          <!-- Security -->
+          <div class="eco-category">
+            <div class="eco-cat-label">Security</div>
+            <div class="eco-cat-chips">
+              <span class="chip" data-group="security">Nonces &amp; sanitization</span>
+              <span class="chip" data-group="security">Authentication / RBAC</span>
+              <span class="chip" data-group="security">User roles &amp; capabilities</span>
+            </div>
+          </div>
+
+          <!-- Performance -->
+          <div class="eco-category">
+            <div class="eco-cat-label">Performance</div>
+            <div class="eco-cat-chips">
+              <span class="chip" data-group="performance">WP Rocket</span>
+              <span class="chip" data-group="performance">LiteSpeed</span>
+              <span class="chip" data-group="performance">Performance optimization</span>
+            </div>
+          </div>
+
+          <!-- Platforms -->
+          <div class="eco-category">
+            <div class="eco-cat-label">Platforms</div>
+            <div class="eco-cat-chips">
+              <span class="chip" data-group="platforms">WooCommerce</span>
+              <span class="chip" data-group="platforms">B2B / B2C pricing</span>
+              <span class="chip" data-group="platforms">Wholesale Suite</span>
+              <span class="chip" data-group="platforms">PDF invoices</span>
+              <span class="chip" data-group="platforms">WPJobBoard</span>
+              <span class="chip" data-group="platforms">ACF</span>
+              <span class="chip" data-group="platforms">WPML / Polylang / Weglot</span>
+            </div>
+          </div>
+
+          <!-- Integrations -->
+          <div class="eco-category">
+            <div class="eco-cat-label">Integrations</div>
+            <div class="eco-cat-chips">
+              <span class="chip" data-group="integrations">Stripe</span>
+              <span class="chip" data-group="integrations">OpenAI</span>
+              <span class="chip" data-group="integrations">AI Voice (Vapi / ElevenLabs)</span>
+              <span class="chip" data-group="integrations">WhatsApp</span>
+              <span class="chip" data-group="integrations">Google Sheets</span>
+              <span class="chip" data-group="integrations">Expedify</span>
+              <span class="chip" data-group="integrations">Klaviyo</span>
+            </div>
+          </div>
+
+          <!-- Supporting -->
+          <div class="eco-category">
+            <div class="eco-cat-label">Supporting</div>
+            <div class="eco-cat-chips">
+              <span class="chip" data-group="supporting">JavaScript / jQuery</span>
+              <span class="chip" data-group="supporting">HTML / CSS</span>
+              <span class="chip" data-group="supporting">Composer</span>
+              <span class="chip" data-group="supporting">cPanel / SSH</span>
+            </div>
+          </div>
+
+          <!-- Also worked with (secondary visual weight) -->
+          <div class="eco-secondary-wrap">
+            <div class="eco-secondary-label">Also worked with</div>
+            <div class="eco-secondary-chips">
+              <span class="chip chip-sm" data-group="secondary">Elementor</span>
+              <span class="chip chip-sm" data-group="secondary">TutorLMS</span>
+              <span class="chip chip-sm" data-group="secondary">BuddyBoss</span>
+              <span class="chip chip-sm" data-group="secondary">Contact Form 7</span>
+              <span class="chip chip-sm" data-group="secondary">WPForms</span>
+              <span class="chip chip-sm" data-group="secondary">Yoast</span>
+            </div>
+          </div>
+
+          <div class="eco-caption">Hover a technology to see how it connects across the backend stack.</div>
         </div>
       </div>
-      <div class="bento-card wide">
-        <div class="card-icon">⇄</div>
-        <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px;">
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section-pad" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="reveal">
+            <div class="eyebrow">About</div>
+            <p class="about-lead">I build from scratch when the project calls for it, and extend what already works when
+              it doesn't. <span class="hl">Same instinct either way: don't rebuild what you don't have to.</span></p>
+          </div>
+          <div class="about-col reveal">
+            <p>My work splits roughly evenly between custom platforms built from scratch and production sites that
+              already had users, revenue, or live listings on them. The from-scratch work means designing the data
+              model, the user flows, and the plugin structure. The extension work means understanding what's already
+              there before adding to it, without breaking what's running.</p>
+            <p>I work close to the client side of things: gathering requirements directly, demoing features as they're
+              built, and taking a bug report through to a fix in production rather than handing it off. Staging before
+              production isn't a formality. It's where I catch the thing that only shows up with real data.</p>
+
+            <div class="about-details">
+              <details class="about-item">
+                <summary>Development approach</summary>
+                <p>On existing sites I start from whatever hooks and data structures are already there before writing
+                  anything new. On new builds I design the tables, post types, and roles around what the project
+                  actually needs, not around what a plugin ships with by default.</p>
+              </details>
+              <details class="about-item">
+                <summary>Working style</summary>
+                <p>Direct client communication over long requirement documents. I'd rather confirm a workflow in a
+                  five-minute call than guess and rebuild later.</p>
+              </details>
+              <details class="about-item">
+                <summary>On integrations</summary>
+                <p>Most of what I've shipped has webhooks at the centre of it: Stripe, WhatsApp, OpenAI, Klaviyo,
+                  Expedify, Google Sheets. Making the API call is usually the straightforward part. The real work is
+                  getting your own backend into the right state before it fires, and handling what comes back reliably.
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section class="section-pad" style="padding-top:0;">
+      <div class="container">
+        <div class="reveal">
+          <div class="eyebrow">Résumé</div>
+          <h2 class="section-title">Preview it here, or take the file with you.</h2>
+        </div>
+
+        <div class="resume-card reveal">
+          <div class="resume-tabs" role="tablist" aria-label="Résumé sections">
+            <button class="resume-tab active" role="tab" id="tab-pane-exp" aria-controls="pane-exp" aria-selected="true" tabindex="0" data-pane="pane-exp">Experience <span class="go">↳</span></button>
+            <button class="resume-tab" role="tab" id="tab-pane-skills" aria-controls="pane-skills" aria-selected="false" tabindex="-1" data-pane="pane-skills">Skills <span class="go">↳</span></button>
+            <button class="resume-tab" role="tab" id="tab-pane-edu" aria-controls="pane-edu" aria-selected="false" tabindex="-1" data-pane="pane-edu">Education <span class="go">↳</span></button>
+          </div>
           <div>
-            <h3>API &amp; third-party integrations</h3>
-            <p>Stripe, WhatsApp Business API, Google Sheets, Klaviyo, and Expedify CRM connected through REST APIs and webhooks.</p>
+            <div class="resume-pane active" id="pane-exp" role="tabpanel" aria-labelledby="tab-pane-exp" tabindex="0">
+              <h4>Junior Software Engineer · Deftsoft</h4>
+              <p style="margin-bottom:14px;">Sep 2025 – Present · Backend development across 10–15 production WordPress
+                sites for 8–10 clients, including recruitment platforms, WooCommerce stores, event payment pipelines,
+                and property systems.</p>
+              <h4>Intern Software Engineer · Deftsoft</h4>
+              <p>Mar 2025 – Sep 2025 · Started on the production codebase immediately, gradually taking on more
+                ownership through a GitLab code-review workflow.</p>
+            </div>
+            <div class="resume-pane" id="pane-skills" role="tabpanel" aria-labelledby="tab-pane-skills" tabindex="0">
+              <ul>
+                <li><strong>Core:</strong> PHP, PHP OOP, MySQL / SQL, WordPress, REST APIs, Webhooks, Git</li>
+                <li><strong>Backend:</strong> Custom plugins, WP_Query, Custom DB tables, Authentication / RBAC, AJAX, WP-Cron, API integrations, Performance optimization</li>
+                <li><strong>Platforms:</strong> WooCommerce, WPJobBoard, ACF, WPML / Polylang / Weglot</li>
+                <li><strong>Integrations:</strong> Stripe, OpenAI, WhatsApp API, Google Sheets, Expedify, Klaviyo, AI Voice (Vapi, ElevenLabs)</li>
+                <li><strong>Supporting:</strong> JavaScript, jQuery, HTML5, CSS3 · Also worked with: Elementor, TutorLMS, BuddyBoss, CF7, WPForms, Yoast</li>
+              </ul>
+            </div>
+            <div class="resume-pane" id="pane-edu" role="tabpanel" aria-labelledby="tab-pane-edu" tabindex="0">
+              <h4>B.Tech, Computer Science &amp; Engineering</h4>
+              <p>Rayat Bahra University, Mohali, Punjab<br>
+                Graduated June 2025 · CGPA 7.78/10</p>
+            </div>
           </div>
-          <div class="card-tags"><span>REST</span><span>Stripe</span><span>WhatsApp</span><span>Klaviyo</span><span>Expedify</span></div>
+          <div class="resume-download">
+            <span>Tarun_Kataria_Backend_Developer_Resume.docx</span>
+            <a href="assets/Tarun_Kataria_Backend_Developer_Resume.docx" download
+              class="btn btn-ghost">Download résumé ↓</a>
+          </div>
         </div>
       </div>
-      <div class="bento-card">
-        <div class="card-icon">◧</div>
-        <div>
-          <h3>Database design</h3>
-          <p>Custom MySQL tables, migrations, and query optimization for plugin-level data.</p>
+    </section>
+    <!-- CONTACT -->
+    <section class="section-pad" id="contact">
+      <div class="container">
+        <div class="reveal">
+          <div class="eyebrow">Contact</div>
+          <h2 class="contact-title">LET'S SHIP<br>SOMETHING.</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="reveal">
+            <div class="contact-links">
+              <a class="contact-link" href="mailto:katariatarun786@gmail.com"><span class="l">Email</span> <span
+                  class="r">katariatarun786@gmail.com</span></a>
+              <a class="contact-link" href="https://linkedin.com/in/tarun-kataria-tk14369" target="_blank"
+                rel="noopener"><span class="l">LinkedIn</span> <span class="r">/in/tarun-kataria-tk14369</span></a>
+              <a class="contact-link" href="https://github.com/katariatarun69" target="_blank" rel="noopener"><span
+                  class="l">GitHub</span> <span class="r">/katariatarun69</span></a>
+              <a class="contact-link" href="tel:+919646505600"><span class="l">Phone</span> <span class="r">+91 96465
+                  05600</span></a>
+            </div>
+          </div>
+
+          <form class="reveal" id="contactForm" novalidate>
+            <!-- Web3Forms -->
+            <input type="hidden" name="access_key" value="9e10efaa-df3d-4902-b438-ba4da540d9a8">
+            <input type="hidden" name="subject" value="New project inquiry — Tarun Kataria Portfolio">
+            <input type="hidden" name="from_name" value="Portfolio Contact Form">
+            <!-- Honeypot spam prevention -->
+            <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
+
+            <div class="form-field">
+              <label for="f-name">Name</label>
+              <input type="text" id="f-name" name="name" autocomplete="name">
+              <span class="err" id="err-name"></span>
+            </div>
+            <div class="form-field">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" name="email" autocomplete="email">
+              <span class="err" id="err-email"></span>
+            </div>
+            <div class="form-field">
+              <label for="f-message">Message</label>
+              <textarea id="f-message" name="message"></textarea>
+              <span class="err" id="err-message"></span>
+            </div>
+            <button type="submit" class="form-submit" id="formSubmitBtn">Send message</button>
+            <p class="form-note" id="formNote"></p>
+          </form>
         </div>
       </div>
-      <div class="bento-card">
-        <div class="card-icon">⚡</div>
-        <div>
-          <h3>Performance &amp; security</h3>
-          <p>Caching with WP Rocket/LiteSpeed, input validation, nonces, and role-based access control.</p>
-        </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <span class="footer-left">© 2026 Tarun Kataria</span>
+      <div class="footer-social">
+        <a href="mailto:katariatarun786@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/tarun-kataria-tk14369" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/katariatarun69" target="_blank" rel="noopener">GitHub</a>
       </div>
+      <a href="#top" class="to-top">↑ Back to top</a>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- EXPERIENCE -->
-<section class="section-pad" id="experience">
-  <div class="container">
-    <div class="reveal">
-      <div class="eyebrow">Experience</div>
-      <h2 class="section-title">1.5 years in, across 10–15 production sites and 8–10 clients.</h2>
-    </div>
-
-    <div class="timeline">
-      <div class="tl-row current reveal">
-        <div class="tl-date">Sep 2025 —<br>Present</div>
-        <div class="tl-body">
-          <h3>Junior Software Engineer <span class="tl-current-badge">Current</span></h3>
-          <span class="tl-org">Deftsoft</span>
-          <p>Own backend development across 10–15 production WordPress sites for 8–10 clients — content platforms, WooCommerce stores, property systems, and recruitment portals.</p>
-          <ul>
-            <li>Build custom backend functionality with PHP, hooks/actions/filters, CPTs, ACF, WP_Query, and custom database tables</li>
-            <li>Integrate Stripe, WhatsApp Business API, Google Sheets, Klaviyo, and Expedify CRM via REST APIs and webhooks</li>
-            <li>Implement input validation, sanitization, nonces, capability checks, and role-based access control</li>
-            <li>Manage staging-to-production deployment: SSH/cPanel, PHP version config, migrations, backups, cron jobs</li>
-          </ul>
-        </div>
-      </div>
-      <div class="tl-row reveal">
-        <div class="tl-date">Mar 2025 —<br>Sep 2025</div>
-        <div class="tl-body">
-          <h3>Intern Software Engineer</h3>
-          <span class="tl-org">Deftsoft</span>
-          <p>Started on the same production codebase from day one, moving from smaller feature tasks to owning full modules over time.</p>
-          <ul>
-            <li>Followed a feature-branch GitLab workflow with senior code review before merging</li>
-            <li>Worked directly with clients on requirements, demos, and issue triage</li>
-          </ul>
-        </div>
-      </div>
-      <div class="tl-row reveal">
-        <div class="tl-date">Graduated<br>June 2025</div>
-        <div class="tl-body">
-          <h3>B.Tech, Computer Science &amp; Engineering</h3>
-          <span class="tl-org">Rayat Bahra University, Mohali, Punjab · CGPA 7.58/10</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS ECOSYSTEM -->
-<section class="section-pad" style="background:var(--bg-1); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
-  <div class="container">
-    <div class="reveal">
-      <div class="eyebrow">Technical stack</div>
-      <h2 class="section-title">Hover a technology to see how it connects.</h2>
-    </div>
-
-    <div class="eco reveal" id="ecoWrap">
-      <!-- backend -->
-      <span class="chip" data-group="core">PHP</span>
-      <span class="chip" data-group="core">PHP OOP</span>
-      <span class="chip" data-group="core">WordPress Core</span>
-      <span class="chip" data-group="core">WordPress APIs</span>
-      <span class="chip" data-group="core">Hooks / Actions / Filters</span>
-      <span class="chip" data-group="core">WP_Query</span>
-      <span class="chip" data-group="core">Custom Plugin Dev</span>
-      <span class="chip" data-group="cms">Custom Post Types</span>
-      <span class="chip" data-group="cms">Custom Taxonomies</span>
-      <span class="chip" data-group="cms">ACF</span>
-      <span class="chip" data-group="cms">User Roles &amp; Capabilities</span>
-      <span class="chip" data-group="cms">WP-CLI</span>
-      <span class="chip" data-group="data">MySQL</span>
-      <span class="chip" data-group="data">SQL</span>
-      <span class="chip" data-group="data">Custom DB Tables</span>
-      <span class="chip" data-group="data">Query Optimization</span>
-      <span class="chip" data-group="api">REST APIs</span>
-      <span class="chip" data-group="api">Custom Endpoints</span>
-      <span class="chip" data-group="api">Stripe</span>
-      <span class="chip" data-group="api">Webhooks</span>
-      <span class="chip" data-group="api">WhatsApp Business API</span>
-      <span class="chip" data-group="api">Google Sheets API</span>
-      <span class="chip" data-group="api">Klaviyo</span>
-      <span class="chip" data-group="api">Expedify CRM</span>
-      <span class="chip" data-group="api">AJAX</span>
-      <span class="chip" data-group="commerce">WooCommerce</span>
-      <span class="chip" data-group="commerce">B2B/B2C Pricing</span>
-      <span class="chip" data-group="commerce">Checkout Customization</span>
-      <span class="chip" data-group="commerce">Order Processing</span>
-      <span class="chip" data-group="sec">Sanitization / Nonces</span>
-      <span class="chip" data-group="sec">RBAC</span>
-      <span class="chip" data-group="perf">WP Rocket</span>
-      <span class="chip" data-group="perf">LiteSpeed</span>
-      <span class="chip" data-group="tools">Git / GitLab</span>
-      <span class="chip" data-group="tools">Composer</span>
-      <span class="chip" data-group="tools">cPanel / SSH</span>
-      <span class="chip" data-group="front">JavaScript / jQuery</span>
-      <span class="chip" data-group="front">HTML5 / CSS3</span>
-      <div class="eco-caption">Hover: related technologies stay lit, everything else steps back.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section-pad" id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="reveal">
-        <div class="eyebrow">About</div>
-        <p class="about-lead">I like extending systems that already work, not rebuilding them from scratch <span class="hl">for the sake of it.</span></p>
-      </div>
-      <div class="about-col reveal">
-        <p>Most of my work has been on production WordPress sites that already had users, revenue, or live listings on them — which means the job is rarely "build from zero." It's understanding what a plugin, theme, or client system already does, and extending it without breaking what's already working.</p>
-        <p>I work close to the client side of things: gathering requirements directly, demoing features as they're built, and taking a bug report through to a fix in production rather than handing it off. Staging before production isn't a formality — it's where I catch the thing that only shows up with real data.</p>
-
-        <div class="about-details">
-          <details class="about-item">
-            <summary>Development approach</summary>
-            <p>I start from whatever hooks and data structures are already there before writing anything new. Most WordPress problems have a path through the plugin API — custom code is for the gaps that genuinely don't, not as a first instinct.</p>
-          </details>
-          <details class="about-item">
-            <summary>Working style</summary>
-            <p>Direct client communication over long requirement documents. I'd rather confirm a workflow in a five-minute call than guess and rebuild later.</p>
-          </details>
-          <details class="about-item">
-            <summary>On integrations</summary>
-            <p>Most of what I've shipped has webhooks at the center of it: Stripe, WhatsApp, Klaviyo, Expedify. Making the API call is usually the straightforward part. The real work is getting your own backend into the right state before it fires and handling what comes back reliably.</p>
-          </details>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- RESUME -->
-<section class="section-pad" style="padding-top:0;">
-  <div class="container">
-    <div class="reveal">
-      <div class="eyebrow">Résumé</div>
-      <h2 class="section-title">Preview it here, or take the file with you.</h2>
-    </div>
-
-    <div class="resume-card reveal">
-      <div class="resume-tabs">
-        <button class="resume-tab active" data-pane="pane-exp">Experience <span class="go">↳</span></button>
-        <button class="resume-tab" data-pane="pane-skills">Skills <span class="go">↳</span></button>
-        <button class="resume-tab" data-pane="pane-edu">Education <span class="go">↳</span></button>
-      </div>
-      <div>
-        <div class="resume-pane active" id="pane-exp">
-          <h4>Junior Software Engineer — Deftsoft</h4>
-          <p style="margin-bottom:14px;">Sep 2025 – Present · Backend development across 10–15 production WordPress sites for 8–10 clients.</p>
-          <h4>Intern Software Engineer — Deftsoft</h4>
-          <p>Mar 2025 – Sep 2025 · Started on production work from the beginning, gradually taking on more ownership through a GitLab code-review workflow.</p>
-        </div>
-        <div class="resume-pane" id="pane-skills">
-          <ul>
-            <li>PHP, WordPress Core &amp; APIs, custom plugin development</li>
-            <li>WooCommerce, MySQL, REST APIs, AJAX</li>
-            <li>Stripe, WhatsApp Business API, Google Sheets, Klaviyo, Expedify CRM</li>
-            <li>Security: sanitization, nonces, RBAC · Performance: WP Rocket, LiteSpeed</li>
-          </ul>
-        </div>
-        <div class="resume-pane" id="pane-edu">
-          <h4>B.Tech, Computer Science &amp; Engineering</h4>
-          <p>Rayat Bahra University, Mohali, Punjab — Graduated June 2025, CGPA 7.58/10</p>
-        </div>
-      </div>
-      <div class="resume-download">
-        <span>Tarun_Kataria_WordPress_Backend_Developer_Resume.docx</span>
-        <a href="assets/Tarun_Kataria_WordPress_Backend_Developer_Resume.docx" download class="btn btn-ghost">Download résumé ↓</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="section-pad" id="contact">
-  <div class="container">
-    <div class="reveal">
-      <div class="eyebrow">Contact</div>
-      <h2 class="contact-title">LET'S SHIP<br>SOMETHING.</h2>
-    </div>
-
-    <div class="contact-grid">
-      <div class="reveal">
-        <div class="contact-links">
-          <a class="contact-link" href="mailto:katariatarun786@gmail.com"><span class="l">Email</span> <span class="r">katariatarun786@gmail.com</span></a>
-          <a class="contact-link" href="https://linkedin.com/in/tarun-kataria-tk14369" target="_blank" rel="noopener"><span class="l">LinkedIn</span> <span class="r">/in/tarun-kataria-tk14369</span></a>
-          <a class="contact-link" href="https://github.com/katariatarun69" target="_blank" rel="noopener"><span class="l">GitHub</span> <span class="r">/katariatarun69</span></a>
-          <a class="contact-link" href="tel:+919646505600"><span class="l">Phone</span> <span class="r">+91 96465 05600</span></a>
-        </div>
-      </div>
-
-      <form class="reveal" id="contactForm" novalidate>
-        <!-- Web3Forms -->
-        <input type="hidden" name="access_key" value="9e10efaa-df3d-4902-b438-ba4da540d9a8">
-        <input type="hidden" name="subject" value="New project inquiry — Tarun Kataria Portfolio">
-        <input type="hidden" name="from_name" value="Portfolio Contact Form">
-        <!-- Honeypot spam prevention -->
-        <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
-
-        <div class="form-field">
-          <label for="f-name">Name</label>
-          <input type="text" id="f-name" name="name" autocomplete="name">
-          <span class="err" id="err-name"></span>
-        </div>
-        <div class="form-field">
-          <label for="f-email">Email</label>
-          <input type="email" id="f-email" name="email" autocomplete="email">
-          <span class="err" id="err-email"></span>
-        </div>
-        <div class="form-field">
-          <label for="f-message">Message</label>
-          <textarea id="f-message" name="message"></textarea>
-          <span class="err" id="err-message"></span>
-        </div>
-        <button type="submit" class="form-submit" id="formSubmitBtn">Send message</button>
-        <p class="form-note" id="formNote"></p>
-      </form>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <div class="container">
-    <span class="footer-left">© 2026 Tarun Kataria · </span>
-    <div class="footer-social">
-      <a href="mailto:katariatarun786@gmail.com">Email</a>
-      <a href="https://linkedin.com/in/tarun-kataria-tk14369" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/katariatarun69" target="_blank" rel="noopener">GitHub</a>
-    </div>
-    <a href="#top" class="to-top">↑ Back to top</a>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>

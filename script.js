@@ -6,6 +6,10 @@
   var nav = document.getElementById('nav');
   function onScroll(){
     if(window.scrollY > 40){ nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
+    var first = document.getElementById('work');
+    if(first && first.getBoundingClientRect().top > window.innerHeight * 0.55){
+      document.querySelectorAll('.nav-links a').forEach(function(a){ a.classList.remove('active'); });
+    }
   }
   document.addEventListener('scroll', onScroll, {passive:true});
   onScroll();
@@ -13,12 +17,22 @@
   /* ---- mobile menu ---- */
   var toggle = document.getElementById('navToggle');
   var menu = document.getElementById('mobileMenu');
-  toggle.addEventListener('click', function(){
-    var open = menu.classList.toggle('open');
+  function setMenu(open){
+    menu.classList.toggle('open', open);
+    document.documentElement.classList.toggle('menu-open', open);
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+  }
+  toggle.addEventListener('click', function(){ setMenu(!menu.classList.contains('open')); });
   menu.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){ menu.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); });
+    a.addEventListener('click', function(){ setMenu(false); });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && menu.classList.contains('open')){ setMenu(false); toggle.focus(); }
+  });
+  window.addEventListener('resize', function(){
+    if(window.innerWidth > 840 && menu.classList.contains('open')){ setMenu(false); }
   });
 
   /* ---- active section indicator ---- */
@@ -101,39 +115,98 @@
 
   /* ---- skills ecosystem hover relationships ---- */
   var related = {
-    core:['core','cms','api'],
-    cms:['cms','core'],
-    data:['data','core'],
-    api:['api','core'],
-    commerce:['commerce','core','data'],
-    sec:['sec','core'],
-    perf:['perf','core'],
-    tools:['tools','core'],
-    front:['front']
+    core: ['core', 'backend', 'integrations', 'security'],
+    backend: ['backend', 'core', 'platforms', 'integrations', 'security', 'performance'],
+    security: ['security', 'backend', 'core'],
+    performance: ['performance', 'backend', 'platforms', 'core'],
+    platforms: ['platforms', 'core', 'backend', 'performance'],
+    integrations: ['integrations', 'core', 'backend'],
+    supporting: ['supporting', 'backend', 'core'],
+    secondary: ['secondary', 'platforms', 'supporting']
   };
   var chips = document.querySelectorAll('#ecoWrap .chip');
+  var categories = document.querySelectorAll('#ecoWrap .eco-category, #ecoWrap .eco-secondary-wrap');
+
+  function highlightEco(chip){
+    var g = chip.getAttribute('data-group');
+    var allow = related[g] || [g];
+
+    chips.forEach(function(c){
+      var cg = c.getAttribute('data-group');
+      if(c === chip){
+        c.classList.add('is-hovered');
+        c.classList.remove('hl', 'dim');
+      } else if(allow.indexOf(cg) !== -1){
+        c.classList.add('hl');
+        c.classList.remove('is-hovered', 'dim');
+      } else {
+        c.classList.add('dim');
+        c.classList.remove('is-hovered', 'hl');
+      }
+    });
+
+    categories.forEach(function(cat){
+      var hasActive = cat.querySelector('.is-hovered, .hl');
+      if(hasActive){
+        cat.classList.add('cat-lit');
+        cat.classList.remove('cat-dim');
+      } else {
+        cat.classList.add('cat-dim');
+        cat.classList.remove('cat-lit');
+      }
+    });
+  }
+
+  function clearEco(){
+    chips.forEach(function(c){
+      c.classList.remove('hl', 'dim', 'is-hovered');
+    });
+    categories.forEach(function(cat){
+      cat.classList.remove('cat-lit', 'cat-dim');
+    });
+  }
+
   chips.forEach(function(chip){
-    chip.addEventListener('mouseenter', function(){
-      var g = chip.getAttribute('data-group');
-      var allow = related[g] || [g];
-      chips.forEach(function(c){
-        var cg = c.getAttribute('data-group');
-        if(allow.indexOf(cg) !== -1){ c.classList.add('hl'); c.classList.remove('dim'); }
-        else { c.classList.add('dim'); c.classList.remove('hl'); }
-      });
-    });
-    chip.addEventListener('mouseleave', function(){
-      chips.forEach(function(c){ c.classList.remove('hl'); c.classList.remove('dim'); });
-    });
+    chip.setAttribute('tabindex', '0');
+    chip.addEventListener('mouseenter', function(){ highlightEco(chip); });
+    chip.addEventListener('mouseleave', clearEco);
+    chip.addEventListener('focus', function(){ highlightEco(chip); });
+    chip.addEventListener('blur', clearEco);
   });
 
-  /* ---- resume tabs ---- */
-  document.querySelectorAll('.resume-tab').forEach(function(tab){
-    tab.addEventListener('click', function(){
-      document.querySelectorAll('.resume-tab').forEach(function(t){ t.classList.remove('active'); });
-      document.querySelectorAll('.resume-pane').forEach(function(p){ p.classList.remove('active'); });
-      tab.classList.add('active');
-      document.getElementById(tab.getAttribute('data-pane')).classList.add('active');
+  if(!hasFinePointer){
+    chips.forEach(function(chip){
+      chip.addEventListener('click', function(ev){
+        ev.stopPropagation();
+        var isAlready = chip.classList.contains('is-hovered');
+        clearEco();
+        if(!isAlready){ highlightEco(chip); }
+      });
+    });
+    document.addEventListener('click', clearEco);
+  }
+
+  /* ---- resume tabs (ARIA + arrow keys) ---- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.resume-tab'));
+  function activateTab(tab, focus){
+    tabs.forEach(function(t){
+      var on = (t === tab);
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.setAttribute('tabindex', on ? '0' : '-1');
+      document.getElementById(t.getAttribute('data-pane')).classList.toggle('active', on);
+    });
+    if(focus){ tab.focus(); }
+  }
+  tabs.forEach(function(tab, i){
+    tab.addEventListener('click', function(){ activateTab(tab, false); });
+    tab.addEventListener('keydown', function(e){
+      var n = null;
+      if(e.key === 'ArrowDown' || e.key === 'ArrowRight'){ n = tabs[(i + 1) % tabs.length]; }
+      else if(e.key === 'ArrowUp' || e.key === 'ArrowLeft'){ n = tabs[(i - 1 + tabs.length) % tabs.length]; }
+      else if(e.key === 'Home'){ n = tabs[0]; }
+      else if(e.key === 'End'){ n = tabs[tabs.length - 1]; }
+      if(n){ e.preventDefault(); activateTab(n, true); }
     });
   });
 
@@ -199,14 +272,18 @@
 
   /* ---- webhook feed marquee content (signature element) ---- */
   var events = [
-    {m:'POST', p:'/webhook/stripe', s:'200', e:'payment.succeeded'},
-    {m:'POST', p:'/webhook/whatsapp', s:'200', e:'notification.sent'},
-    {m:'POST', p:'/webhook/klaviyo', s:'200', e:'profile.subscribed'},
-    {m:'GET',  p:'/wp-json/wp/v2/candidates', s:'200', e:'private=true'},
-    {m:'POST', p:'/webhook/expedify', s:'200', e:'lead.created'},
-    {m:'POST', p:'/api/sheets/append', s:'200', e:'row.inserted'},
-    {m:'POST', p:'/webhook/stripe', s:'200', e:'checkout.completed'},
-    {m:'GET',  p:'/wp-json/woocommerce/orders', s:'200', e:'order.synced'}
+    {m:'POST', p:'/stripe/v1/webhook', s:'200', e:'signature.verified'},
+    {m:'POST', p:'/api/sheets/append', s:'200', e:'access.row.inserted'},
+    {m:'POST', p:'/cron/sheet.sync', s:'200', e:'wp_user.created'},
+    {m:'POST', p:'/webhook/expedify', s:'200', e:'whatsapp.notified'},
+    {m:'POST', p:'/ajax/contact.request', s:'200', e:'request.accepted'},
+    {m:'POST', p:'/openai/chat', s:'200', e:'description.generated'},
+    {m:'POST', p:'/webhook/woo/order', s:'200', e:'b2b.price_applied'},
+    {m:'POST', p:'/api/pdf/brochure', s:'200', e:'brochure.generated'},
+    {m:'POST', p:'/api/gd/frame', s:'200', e:'image.rendered'},
+    {m:'POST', p:'/wp-json/wpjb/v1/job', s:'200', e:'job.draft_created'},
+    {m:'POST', p:'/webhook/whatsapp', s:'200', e:'cta.sent'},
+    {m:'POST', p:'/ajax/save.candidate', s:'200', e:'candidate.saved'}
   ];
   function renderFeed(){
     var track = document.getElementById('feedTrack');
